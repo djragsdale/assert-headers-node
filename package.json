@@ -4,9 +4,10 @@
   "description": "Assert HTTP headers",
   "main": "lib/index.js",
   "bin": {
-    "assert-headers": "bin/assert-headers.js"
+    "assert-headers": "bin/assert-headers/index.js"
   },
   "scripts": {
+    "format": "standard --fix",
     "lint": "standard",
     "test": "jest ."
   },
