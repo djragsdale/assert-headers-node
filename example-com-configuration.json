@@ -1,0 +1,7 @@
+{
+  "user-agent": "assert-headers-node",
+  "origin": "https://example.com",
+  "schema": {
+    "cache-control": true
+  }
+}
