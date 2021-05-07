@@ -6,7 +6,6 @@ const { fromUrl } = require('../../lib')
 const HeaderAssertionError = require('../../lib/HeaderAssertionError')
 const getConfiguration = require('./getConfiguration')
 const pkg = require('../../package.json')
-const assertHeaders = require('../../lib/assertHeaders')
 
 const EXIT_CODES = {
   ASSERTION_FAILED: 2,
@@ -20,10 +19,10 @@ if (process.argv.includes('--version')) {
   process.exit(EXIT_CODES.SUCCESS)
 }
 
-let opts = {
+const opts = {
   configurationPath: path.join(process.cwd(), './headersSchema.json'),
   silentMode: false,
-  url: undefined,
+  url: undefined
 }
 
 if (process.argv.includes('--silent')) {

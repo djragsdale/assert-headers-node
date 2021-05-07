@@ -9,7 +9,7 @@ describe('bin/assert-headers/getConfiguration', () => {
     await expect(getConfiguration(path.join(__dirname, './__fixtures__/nonexistent.json')))
       .rejects.toThrow()
   })
-  
+
   test('rejects if the file can not be parsed', async () => {
     await expect(getConfiguration(path.join(__dirname, './__fixtures__/badConfiguration.json')))
       .rejects.toThrow()
