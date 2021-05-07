@@ -1,0 +1,13 @@
+{
+  "user-agent": "assert-headers-node",
+  "origin": "https://example.com",
+  "schema": {
+    "cache-control": false,
+    "strict-transport-security": true,
+    "x-content-type-options": "nosniff",
+    "x-frame-options": {
+      "DENY": true,
+      "SAMEORIGIN": false
+    }
+  }
+}
