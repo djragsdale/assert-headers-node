@@ -1,6 +1,6 @@
 {
   "name": "assert-headers",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Assert HTTP headers",
   "main": "lib/index.js",
   "bin": {

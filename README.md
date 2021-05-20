@@ -50,7 +50,7 @@ TODO: Show how the exit codes can be used in smoke tests
 
 ```json
 {
-  "user-agent": "assert-headers-node",
+  "userAgent": "assert-headers-node",
   "origin": "https://example.com",
   "schema": {
     "cache-control": false,
@@ -116,7 +116,7 @@ const assertHeader = require('assert-header')
 
 (async () => {
   const configuration {
-    'user-agent': 'Custom User Agent name',
+    'userAgent': 'Custom User Agent name',
     origin: 'https://my-domain.com',
     schema: {
       'cache-control': false,
