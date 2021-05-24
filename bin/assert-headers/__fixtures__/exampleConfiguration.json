@@ -1,5 +1,5 @@
 {
-  "user-agent": "assert-headers-node",
+  "userAgent": "assert-headers-node",
   "origin": "https://example.com",
   "schema": {
     "cache-control": false,

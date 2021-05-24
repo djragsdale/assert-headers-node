@@ -15,8 +15,13 @@ describe('bin/assert-headers/getConfiguration', () => {
       .rejects.toThrow()
   })
 
-  test('resolves configuration from absolute path', async () => {
+  test('resolves json configuration from absolute path', async () => {
     await expect(getConfiguration(path.join(__dirname, './__fixtures__/exampleConfiguration.json')))
+      .resolves.toBeInstanceOf(Object)
+  })
+
+  test('resolves json configuration from absolute path', async () => {
+    await expect(getConfiguration(path.join(__dirname, './__fixtures__/exampleConfiguration.yml')))
       .resolves.toBeInstanceOf(Object)
   })
 })

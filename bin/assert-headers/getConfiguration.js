@@ -1,4 +1,5 @@
 const { readFile } = require('fs')
+const yaml = require('js-yaml')
 
 module.exports = function getConfiguration (configurationPath) {
   return new Promise((resolve, reject) => {
@@ -7,10 +8,15 @@ module.exports = function getConfiguration (configurationPath) {
         if (err) return reject(err)
 
         try {
+          if (configurationPath.endsWith('.yml') || configurationPath.endsWith('.yaml')) {
+            const config = yaml.load((data || '').toString())
+            return resolve(config)
+          }
+
           const config = JSON.parse((data || '').toString())
-          resolve(config)
+          return resolve(config)
         } catch (parseError) {
-          reject(parseError)
+          return reject(parseError)
         }
       })
     } catch (err) {

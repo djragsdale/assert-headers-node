@@ -1,0 +1,9 @@
+userAgent: "assert-headers-node"
+origin: "https://example.com"
+schema:
+  cache-control: False
+  strict-transport-security: True
+  x-content-type-options: "nosniff"
+  x-frame-options:
+    DENY: True
+    SAMEORIGIN: False
